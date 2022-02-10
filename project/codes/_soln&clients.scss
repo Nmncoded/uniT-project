@@ -1,0 +1,345 @@
+
+/* custom styles */
+
+
+$b-color: #dc3c45;
+$white: white;
+
+@mixin flex-spacebetween-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-column-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin btn {
+    text-decoration: none;
+    border: 0;
+    font-size: 2.2rem;
+    background-color: rgba(#dc3c45,1);
+    color: white;
+    padding: 1.4rem 1.8rem;
+    border-radius: 2.4rem;
+}
+
+/* soln section */
+
+
+
+
+/* sol-head-section */
+
+.bg-color {
+    background-color:  white;
+}
+
+.sol-head-section {
+    // background-color: rgba(#f8f9fa,1);
+    padding: {
+        left: 2rem;
+        right: 2rem;
+        top: 10rem;
+        bottom: 10rem;
+    };
+}
+.sol-head {
+    @include flex-column-center-center;
+    h3 {
+        word-spacing: 1rem;
+        text-align: center;
+        line-height: 1.4;
+        font-size: 6rem;
+        font-weight: 750;
+        color: rgba(0,0,0,0.8);
+    }
+    p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    font-size: 2.8rem;
+    line-height: 1.6;
+    padding: {
+        top: 3rem;
+        bottom: 4rem;
+    };
+    color: rgba(0,0,0,0.4);
+    }
+    a {
+        @include btn;
+        background-color: rgba(#f8f9fa,1);
+        color: #dc3c45;
+        font-size: 2rem;
+        padding: 1rem 2.4rem;
+        border: 2px solid #dc3c45;
+        border-top: 2px solid rgba(#dc3c45,0.5);
+    }
+}
+
+
+/* topconsulting section */
+
+.topconsulting-section {
+    padding: {
+        left: 2rem;
+        right: 2rem;
+        top: 12rem;
+        bottom: 16rem;
+    };
+}
+
+.topconsult {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.align {
+    align-items: center;
+}
+.text-sec {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 46%;
+    @media screen and (max-width:768px){
+        width: 100%;
+    }
+    padding: 0 2rem 2rem 2rem;
+    div {
+        color: #dc3c45;
+        font-size: 8rem;
+        margin-bottom: 3rem;
+    }
+    h1 {
+        line-height: 1.5;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 850;
+        color: rgba(0,0,0,0.8);
+        margin-bottom: 2rem;
+    }
+    p {
+        text-align: center;
+        font-size: 2.4rem;
+        line-height: 1.5;
+        padding: {
+            bottom: 1rem;
+        };
+        color: rgba(0,0,0,0.4);
+        margin-bottom: 2rem;
+    }
+    a {
+        @include btn;
+        background-color: rgba(#f8f9fa,1);
+        color: #dc3c45;
+        font-size: 2rem;
+        padding: 1rem 2.4rem;
+        border: 2px solid #dc3c45;
+        border-top: 2px solid rgba(#dc3c45,0.5);
+    }
+
+}
+.img-sec {
+    width: 48%;
+    @media screen and (max-width:768px){
+        width: 100%;
+    }
+    margin-bottom: 2rem;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+}
+
+/* req quote section */
+
+.req-quote-section {
+    background-color: $b-color;
+    padding: {
+        left: 2rem;
+        right: 2rem;
+        top: 5rem;
+        bottom: 2rem;
+    };
+}
+
+.req-quote {
+    @include flex-spacebetween-center;
+    @media screen and (max-width:768px){
+        @include flex-column-center-center;
+    }
+}
+.flex-center {
+    @media screen and (max-width:968px){
+        @include flex-column-center-center;
+    }
+}
+.req-text {
+    margin-bottom: 3rem;
+    h1 {
+        @media screen and (max-width:768px){
+            text-align: center;
+        }
+        color: rgba(white,0.8);
+        font-size: 2.4rem;
+        line-height: 1.4;
+        margin-bottom: 1.6rem;
+    }
+    p {
+        @media screen and (max-width:768px){
+            text-align: center;
+        }
+        line-height: 1.4;
+        color: rgba(white,0.6);
+        font-size: 1.8rem;
+    }
+}
+.flex {
+    @include flex-center-center;
+    h1 {
+        border-right: 2px solid rgba(white,0.4);
+        padding-right: 2rem;
+        margin-right: 2rem;
+    }
+    p{
+        margin-bottom: 2rem;
+        vertical-align: middle;
+    }
+}
+.req-btn {
+    margin-bottom: 3rem;
+}
+.req-btn a {
+        @include btn;
+        color: rgba(white,0.8);
+        font-size: 1.6rem;
+        padding: 1rem 2.4rem;
+        border: {
+            top: 2px solid rgba(white,0.8);
+            bottom: 1px solid rgba(white,0.4)
+        };
+}
+
+/* ind-leader-section */
+
+.ind-leader-section {
+    padding: {
+        left: 2rem;
+        right: 2rem;
+        top: 10rem;
+    };
+}
+
+.ind-leader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.ind-leader-text {
+    width: 38%;
+    header {
+        font-size: 2.2rem;
+        font-weight: 550;
+        color: #dc3c45;
+    }
+    @media screen and (max-width:768px){
+        width: 100%;
+        h4, p {
+            padding-right: 6rem;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h4 {
+        line-height: 1.5;
+        font-size: 4rem;
+        font-weight: 850;
+        color: rgba(0,0,0,0.8);
+        margin-bottom: 2rem;
+    }
+    p {
+        font-size: 1.8rem;
+        line-height: 1.4;
+        padding: {
+            bottom: 1rem;
+        };
+        color: rgba(0,0,0,0.4);
+        margin-bottom: 2rem;
+    }
+}
+.ind-leader-img {
+    width: 50%;
+    @media screen and (max-width:768px){
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.margin-bottom {
+    margin-bottom: 8rem;
+}
+/* clients section */
+
+.clients-section {
+    background-color: rgba(#f8f9fa,1);
+    padding: {
+        left: 2rem;
+        right: 2rem;
+        top: 10rem;
+        bottom: 10rem;
+    };
+}
+
+.clients {
+    @include flex-column-center-center;
+    h5 {
+        word-spacing: 1rem;
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 6rem;
+        font-weight: 750;
+        color: rgba(0,0,0,0.8);
+    }
+}
+
+.clients-name {
+    @include flex-spacebetween-center;
+    div {
+        width: 14%;
+        @media screen and (max-width:768px){
+            width: 30%;
+            margin-bottom: 2rem;
+        }
+    }
+    div img {
+        width: 100%;
+    }
+}

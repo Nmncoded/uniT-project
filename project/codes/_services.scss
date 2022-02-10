@@ -1,0 +1,166 @@
+
+/* custom styles */
+
+
+$b-color: #dc3c45;
+$white: white;
+
+@mixin flex-spacebetween-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin btn {
+    text-decoration: none;
+    border: 0;
+    font-size: 2.2rem;
+    background-color: rgba(#dc3c45,1);
+    color: white;
+    padding: 1.4rem 1.8rem;
+    border-radius: 2.4rem;
+}
+
+/* services section */
+
+.services-section {
+    padding:  {
+        top: 10rem;
+        bottom: 8rem;
+        left: 2rem;
+        right: 2rem;
+    };
+}
+.padding-bottom {
+    padding-bottom: 0;
+}
+.services h2 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 850;
+    color: rgba(0,0,0,0.8);
+}
+.services p {
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 1.4;
+    padding: {
+        top: 3rem;
+        bottom: 4rem;
+    };
+    color: rgba(0,0,0,0.6);
+}
+.main-services {
+    @include flex-spacebetween-center;
+    padding: {
+        top: 4rem;
+        bottom: 2rem;
+    };
+}
+.consulting, .finance, .technology {
+    @include flex-center-center;
+    padding: 3rem 2rem;
+    width: 28%;
+    @media screen and (max-width:768px){
+        width: 100%;
+    }
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: {
+        top: 1px solid rgba(0,0,0,0.1);
+        bottom: 2px solid rgba(0,0,0,0.2);
+        left: 2px solid rgba(0,0,0,0.2);
+        right: 2px solid rgba(0,0,0,0.2);
+    };
+    div {
+        @include flex-center-center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    div img {
+        width: 30%;
+        object-fit: cover;
+        @media screen and (max-width:768px){
+            width: 25%;
+        }
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 1rem 0;
+        color: rgba(0,0,0,0.8);
+    }
+    p {
+        text-align: center;
+    font-size: 2.2rem;
+    padding: {
+        top: 1rem;
+        bottom: 2rem;
+    };
+    line-height: 1.4;
+    color: rgba(0,0,0,0.4);
+    }
+    a {
+        @include btn;
+        background-color: white;
+        color: #dc3c45;
+        font-size: 2rem;
+        padding: 1rem 2.4rem;
+        margin: 1rem 0;
+        border: 2px solid #dc3c45;
+    }
+}
+
+.center {
+    @media screen and (max-width:968px) {
+        @include flex-center-center;
+    }
+}
+
+.flexstart {
+    border: 0;
+    @media screen and (max-width:968px) {
+        // width: 40%;
+        margin: {
+            left: 2rem;
+            right: 2rem;
+        };
+    }
+    @include flex-start-center;
+    div {
+        @include flex-start-center;
+    }
+    div img {
+        width: 10rem;
+    }
+    p {
+        text-align: start;
+    }
+}
+.hr {
+    margin: {
+        top: 1rem;
+        bottom: 1rem;
+    };
+    border: 0;
+    padding-top: 1.5px;
+    background-color: rgba(0,0,0,0.1);
+}

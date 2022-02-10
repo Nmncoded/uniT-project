@@ -1,0 +1,234 @@
+
+/* custom styles */
+
+
+$h-b-color: #dc3c45;
+$white: white;
+
+@mixin flex-spacebetween-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+}
+@mixin btn {
+    text-decoration: none;
+    border: 0;
+    font-size: 2.2rem;
+    background-color: rgba(#dc3c45,1);
+    color: white;
+    padding: 1.4rem 1.8rem;
+    border-radius: 2.4rem;
+}
+@mixin flex-column-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@mixin ideatxt {
+    // @media screen and (max-width:768px){
+    //     width: 100%;
+    // }
+    @include flex-spacebetween-center;
+    margin-bottom: 5rem;
+    &-icon {
+        font-size: 4rem;
+        color: rgba(black,0.7);
+        @include flex-center-center;
+        width: 12%;
+        box-sizing: border-box;
+        padding-right: 2rem;
+    }
+    &-text {
+        width: 86%;
+        header {
+            font-size: 2.4rem;
+            font-weight: 550;
+            color: rgba(black,0.7);
+            margin-bottom: 1.6rem;
+        }
+        p {
+            line-height: 1.5;
+            font-size: 1.5rem;
+            color: rgba(black,0.5);
+        }
+    }
+}
+
+
+/* aboutus section */
+
+
+.hero-about-us-section {
+    margin-top: 14rem;
+    background-color: #dc3c45;
+    padding: {
+        top: 6rem;
+        bottom: 6rem;
+        left: 2rem;
+        right: 2rem;
+    }; 
+}
+
+.aboutus {
+    @include flex-column-center-center;
+    h1 {
+        font-size: 5.4rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 2rem;
+    }
+    p   {
+        color: rgba(white,0.8);
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
+
+/* idea section */
+
+.idea-section {
+    padding: {
+        top: 6rem;
+        bottom: 4rem;
+        left: 2rem;
+        right: 2rem;
+    };
+}
+
+.idea {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width:768px){
+        flex-wrap: wrap;
+    }
+    box-sizing: border-box;
+    
+
+}
+.idea-img {
+    
+    width: 40rem;
+    @media screen and (max-width:768px){
+        width: 100%;
+        
+    }
+    box-sizing: border-box;
+    @include flex-center-center;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    img {
+        width: 100%;
+        @media screen and (max-width:768px){
+            width: 75%;
+            
+        }
+        object-fit: cover;
+    }
+}
+.idea-text {
+    
+    width: 54%;
+    @media screen and (max-width:768px){
+        width: 100%;
+    }
+    margin-bottom: 3rem;
+    padding: 1.4rem;
+}
+
+.mission, .Vision, .Values {
+    @include ideatxt;
+}
+
+/* our-team */
+
+.our-team-section {
+    background-color:  rgba(#f8f9fa,1);
+    padding: {
+        top: 6rem;
+        bottom: 6rem;
+        left: 2rem;
+        right: 2rem;
+    };
+}
+.our-team {
+    header {
+        text-align: center;
+        word-spacing: 1rem;
+        text-align: center;
+        line-height: 1.4;
+        font-size: 6rem;
+        font-weight: 750;
+        color: rgba(0,0,0,0.8);
+    }
+    p {
+        text-align: center;
+        font-size: 2.8rem;
+        line-height: 1.6;
+        padding: {
+            bottom: 4rem;
+        };
+        color: rgba(0,0,0,0.6);
+    }
+}
+.team-members {
+    @include flex-center-center;
+    .member {
+        box-shadow: 0 0 16px 2px rgba(black,0.1);
+        border-radius: .4rem;
+        width: 20rem;
+        @media screen and (max-width:568px){
+            width: 100%;
+            margin-top: 4rem;
+        }
+        margin: {
+            left: 3rem;
+            right: 3rem;
+            top: 2rem;
+        };
+        h1 {
+            padding: 3rem 0 1rem 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 550;
+            color: rgba(black,0.8);
+        }
+        p {
+            font-size: 1.2rem;
+            color: #dc3c45;
+            padding: {
+                left: 1rem;
+                right: 1rem;
+                bottom: 2rem;
+            };
+        }
+    }
+    .member div {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
